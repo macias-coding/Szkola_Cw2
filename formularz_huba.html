@@ -1,0 +1,140 @@
+<!DOCTYPE html> 
+  <html lang="pl-PL">
+<html> 
+     <head> 
+             <meta charset="utf-8"> 
+             <title> Huba Formularz</title> 
+     </head> 
+ <body bgcolor="#D6B075"> 
+<A HREF="index.html"> wróć </A> <br>
+<center><h1> Formularz Podanie o Prace</h1></center> 
+<center><form enctype="text/plain" action="mailto:mkryniew@wp.pl" subject="formularz_dane" method="Post">
+ 
+    <fieldset>
+      <legend>Dane osobowe</legend>
+ 
+      <label for="firstname">Imię:<br>
+        <input id="firstname" name="firstname" type="text" maxlength="100" />
+      </label>
+      <br><br>
+ 
+      <label for="lastname">Nazwisko:<br>
+        <input id="lastname" name="lastname" type="text" maxlength="100" />
+      </label>
+      <br><br>
+ 
+      <label for="login">Login (nick):<br>
+        <input id="login" name="login" type="text" maxlength="50" />
+      </label>
+      <br><br>
+ 
+      <label for="password">Hasło:<br>
+        <input id="password" name="password" type="password" />
+      </label>
+      <br><br>
+ 
+      <label for="experience_years">Doświadczenie (lata):<br>
+        <input id="experience_years" name="experience_years" type="number" min="0" step="0.5" />
+      </label>
+      <br><br>
+ 
+      <label for="about">Opowiedz coś o sobie / Portfolio / Uwagi:<br>
+        <textarea id="about" name="about" rows="6" cols="60" placeholder="Napisz kilka zdań..."></textarea>
+      </label>
+      <br><br>
+ 
+      <label for="portfolio_file">Link lub plik z portfolio (opcjonalnie):<br>
+        <input id="portfolio_file" name="portfolio_file" type="file" />
+      </label>
+ 
+    </fieldset>
+ 
+    <br>
+ 
+    <fieldset>
+      <legend>Wykształcenie</legend>
+      <label for="education">Wybierz wykształcenie:<br>
+        <select id="education" name="education">
+          <option value="">-- wybierz --</option>
+          <option value="szkola_podstawowa">Szkoła podstawowa</option>
+          <option value="technikum">Technikum</option>
+          <option value="szkola_zawodowa">Szkoła zawodowa</option>
+          <option value="licencjat">Licencjat</option>
+          <option value="magister">Magister</option>
+          <option value="inny">Inne</option>
+        </select>
+      </label>
+    </fieldset>
+ 
+    <br>
+ 
+    <fieldset>
+      <legend>Stanowisko i rodzaj pracy</legend>
+ 
+      <label for="position">Wybierz stanowisko:<br>
+        <select id="position" name="position">
+          <option value="">-- wybierz --</option>
+          <option value="programista">Programista</option>
+          <option value="tester">Tester</option>
+          <option value="devops">DevOps</option>
+          <option value="inny">Inne</option>
+        </select>
+      </label>
+      <br><br>
+ 
+      <span>Wymiar pracy:</span><br>
+      <label><input type="radio" name="work_time" value="full_time"> Pełen etat</label><br>
+      <label><input type="radio" name="work_time" value="part_time"> Część etatu</label><br>
+      <label><input type="radio" name="work_time" value="b2b"> B2B / kontrakt</label>
+      <br><br>
+ 
+      <span>Tryb pracy (wybierz):</span><br>
+      <label><input type="checkbox" name="mode_remote" value="remote"> Praca zdalna</label><br>
+      <label><input type="checkbox" name="mode_on_site" value="on_site"> Praca stacjonarna</label>
+ 
+    </fieldset>
+ 
+    <br>
+ 
+    <fieldset>
+      <legend>Języki programowania</legend>
+      <label><input type="checkbox" name="lang[]" value="html"> HTML</label><br>
+      <label><input type="checkbox" name="lang[]" value="cpp"> C++</label><br>
+      <label><input type="checkbox" name="lang[]" value="csharp"> C#</label><br>
+      <label><input type="checkbox" name="lang[]" value="java"> Java</label><br>
+      <label><input type="checkbox" name="lang[]" value="python"> Python</label><br>
+      <label><input type="checkbox" name="lang[]" value="javascript"> JavaScript</label>
+    </fieldset>
+ 
+    <br>
+ 
+    <fieldset>
+      <legend>Stopień zaawansowania</legend>
+      <!-- w szkicu były checkboxy — pozostawiłem to jako pola wielokrotnego wyboru -->
+      <label><input type="checkbox" name="level[]" value="junior"> Junior</label><br>
+      <label><input type="checkbox" name="level[]" value="junior_plus"> Junior +</label><br>
+      <label><input type="checkbox" name="level[]" value="mid"> Mid</label><br>
+      <label><input type="checkbox" name="level[]" value="senior"> Senior</label>
+    </fieldset>
+ 
+    <br>
+ 
+    <fieldset>
+      <legend>Oświadczenia / zgody</legend>
+      <label><input type="checkbox" name="agree_data" required> Wyrażam zgodę na przetwarzanie danych osobowych zawartych w formularzu.</label>
+      <br>
+      <label><input type="checkbox" name="agree_terms"> Oświadczam, że informacje są prawdziwe.</label>
+      <br>
+      <label><input type="checkbox" name="agree_contact"> Wyrażam zgodę na kontakt rekrutacyjny.</label>
+    </fieldset>
+ 
+    <br>
+ 
+    <button type="reset">RESET</button>
+    <button type="submit">WYŚLIJ</button>
+ 
+  </form></center>
+ 
+</body>
+</html>
+
